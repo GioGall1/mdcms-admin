@@ -1,0 +1,141 @@
+/* -----------------------------------------
+   GLOBAL DARK THEME OVERRIDES FOR ANT DESIGN
+   ----------------------------------------- */
+
+/* Общий фон */
+.dark,
+.dark html,
+.dark body,
+.dark .ant-layout,
+.dark .ant-layout-content,
+.dark .ant-layout-footer,
+.dark .ant-layout-sider {
+  background-color: var(--ant-color-bg-container, #0f0f0f) !important;
+  color: var(--ant-color-text, #ffffff) !important;
+}
+
+/* Карточки */
+.dark .ant-card,
+.dark .ant-card-bordered,
+.dark .ant-card-body {
+  background-color: #141414 !important;
+  border-color: #2a2a2a !important;
+  color: var(--ant-color-text) !important;
+}
+
+/* Таблицы */
+.dark .ant-table,
+.dark .ant-table-container,
+.dark .ant-table-thead > tr > th,
+.dark .ant-table-tbody > tr > td {
+  background-color: #141414 !important;
+  border-color: #2a2a2a !important;
+  color: var(--ant-color-text) !important;
+}
+
+.dark .ant-table-thead > tr > th {
+  background-color: #1f1f1f !important;
+}
+
+/* Инпуты */
+.dark .ant-input,
+.dark .ant-input-affix-wrapper,
+.dark .ant-select-selector,
+.dark .ant-input-number,
+.dark textarea.ant-input {
+  background-color: #1b1b1b !important;
+  border-color: #2a2a2a !important;
+  color: var(--ant-color-text) !important;
+}
+
+.dark .ant-input::placeholder,
+.dark .ant-input-affix-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.dark .ant-input-affix-wrapper .anticon,
+.dark .ant-input-suffix .anticon {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Формы */
+.dark .ant-form-item-label > label {
+  color: var(--ant-color-text) !important;
+}
+
+/* Статистика */
+.dark .ant-statistic-content,
+.dark .ant-statistic-title {
+  color: var(--ant-color-text) !important;
+}
+
+/* Модалки */
+.dark .ant-modal-content,
+.dark .ant-modal-header {
+  background-color: #141414 !important;
+  border-color: #2a2a2a !important;
+}
+
+.dark .ant-modal-title {
+  color: var(--ant-color-text) !important;
+}
+
+/* Dropdown / Select */
+.dark .ant-dropdown-menu,
+.dark .ant-select-dropdown {
+  background-color: #1d1d1d !important;
+  border-color: #2a2a2a !important;
+}
+
+.dark .ant-dropdown-menu-item,
+.dark .ant-select-item,
+.dark .ant-select-item-option,
+.dark .ant-select-item-option-content {
+  color: var(--ant-color-text) !important;
+}
+
+.dark .ant-select-item-option-active,
+.dark .ant-select-item-option-selected,
+.dark .ant-dropdown-menu-item:hover {
+  background-color: #2a2a2a !important;
+  color: var(--ant-color-text) !important;
+}
+
+.dark .ant-menu-submenu-popup,
+.dark .ant-menu-submenu-popup .ant-menu {
+  background-color: #1d1d1d !important;
+}
+
+.dark .ant-menu-submenu-popup .ant-menu-item {
+  color: var(--ant-color-text) !important;
+}
+
+.dark .ant-menu-submenu-popup .ant-menu-item:hover,
+.dark .ant-menu-submenu-popup .ant-menu-item-selected {
+  background-color: #2a2a2a !important;
+  color: var(--ant-color-text) !important;
+}
+
+/* Кнопки */
+.dark .ant-btn-default {
+  background-color: #1d1d1d !important;
+  color: var(--ant-color-text) !important;
+  border-color: #2a2a2a !important;
+}
+
+.dark .ant-btn:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* Бордеры */
+.dark * {
+  border-color: #2a2a2a !important;
+}
+
+/* Breadcrumbs */
+.dark .ant-breadcrumb,
+.dark .ant-breadcrumb-link,
+.dark .ant-breadcrumb-link a,
+.dark .ant-breadcrumb-separator {
+  color: var(--ant-color-text) !important;
+}

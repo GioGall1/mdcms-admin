@@ -50,10 +50,12 @@ export default {
   setup() {
     const theme = inject('theme');
     const toggleTheme = inject('toggleTheme');
+    const isDarkTheme = inject('isDarkTheme');
 
     return {
       theme,
-      toggleTheme
+      toggleTheme,
+      isDarkTheme
     };
   },
   components: {

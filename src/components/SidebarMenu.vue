@@ -145,6 +145,7 @@ export default defineComponent({
 .custom-menu {
   height: 100%;
   border-right: 0;
+  margin-left: 8px;
 }
 
 .menu-item-content {

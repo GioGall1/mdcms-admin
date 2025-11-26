@@ -1,6 +1,14 @@
 <template>
   <ConfigProvider :theme="computedTheme">
-    <div id="app">
+    <div
+      id="app"
+      :class="{ dark: isDarkTheme }"
+      :style="{
+        background: computedTheme.token.colorBgContainer,
+        color: computedTheme.token.colorText,
+        minHeight: '100vh'
+      }"
+    >
       <router-view />
     </div>
   </ConfigProvider>
@@ -8,7 +16,7 @@
 
 <script>
 import { ConfigProvider } from 'ant-design-vue';
-import { ref, computed, provide } from 'vue';
+import { ref, computed, provide, watchEffect } from 'vue';
 
 export default {
   name: 'App',
@@ -17,6 +25,7 @@ export default {
   },
   setup() {
     const darkTheme = ref(false);
+    const isDarkTheme = computed(() => darkTheme.value);
 
     const themes = {
       light: {
@@ -30,7 +39,7 @@ export default {
       dark: {
         token: {
           colorPrimary: '#7775ff',
-          colorBgContainer: '#000000',
+          colorBgContainer: '#0f0f0f',
           colorText: '#ffffff',
           colorBgHeader: '#1d1d1d',
         },
@@ -43,12 +52,26 @@ export default {
       darkTheme.value = !darkTheme.value;
     };
 
+    watchEffect(() => {
+      const isDark = darkTheme.value;
+      const bg = computedTheme.value.token.colorBgContainer;
+      const textColor = computedTheme.value.token.colorText;
+
+      document.documentElement.classList.toggle('dark', isDark);
+      document.body.classList.toggle('dark', isDark);
+      document.documentElement.style.backgroundColor = bg;
+      document.body.style.backgroundColor = bg;
+      document.body.style.color = textColor;
+    });
+
     provide('theme', computedTheme);
     provide('toggleTheme', toggleTheme);
+    provide('isDarkTheme', isDarkTheme);
 
     return {
       computedTheme,
-      toggleTheme
+      toggleTheme,
+      isDarkTheme
     };
   }
 };

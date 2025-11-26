@@ -312,7 +312,6 @@ export default defineComponent({
 }
 
 .custom-header {
-  background: #fff;
   padding: 0;
 }
 

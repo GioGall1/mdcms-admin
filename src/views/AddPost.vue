@@ -1,5 +1,5 @@
 <template>
-    <a-layout-content style="padding: 24px; background: #fff; min-height: 360px">
+    <a-layout-content style="padding: 24px; min-height: 360px">
         <a-breadcrumb style="margin-bottom: 30px;">
             <a-breadcrumb-item href="/">Главная</a-breadcrumb-item>
             <a-breadcrumb-item href="/categories">Блог</a-breadcrumb-item>
